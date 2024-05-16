@@ -1,0 +1,250 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Caprasimo", serif;
+}
+
+/* Estilos para el header */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background-color: #f5ebdc;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+.nav-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000; /* Asegura que el nav esté por encima de otros elementos */
+  background-color: #f8f8f8;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.logo img {
+  width: 100px; 
+}
+
+nav ul {
+ list-style-type: none;
+ margin: 0;
+ padding: 0;
+ display: flex;
+}
+
+nav ul li {
+  display: inline-block;
+  margin-left: 20px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+}
+
+.desplegable ul {
+  display: none;
+  position: absolute;
+  background-color: #f5ebdc;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  z-index: 1;
+}
+
+.desplegable:hover ul {
+  display: block;
+}
+
+.desplegable ul li {
+  display: block;
+  padding: 10px;
+}
+
+.desplegable ul li a {
+  color: #333;
+}
+
+.boton-inicio-sesion {
+  background-color: brown; /* Fondo rojo claro */
+  color: white; /* Texto blanco */
+  border: none; /* Sin borde */
+  padding: 5px;
+  margin-right: 100px;
+  margin-left: 200px;
+  font-size: 16px; /* Tamaño del texto */
+  border-radius: 5px; /* Bordes redondeados */
+  cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
+}
+/* Parte del video */
+.home{
+  width: 100%;
+  height: 100%;
+  margin: 238px 0px 0px;
+}
+.titulo_home{
+  height: 100%;
+  width: 65vw;
+  padding: 200px 60px;
+  font-style: normal;
+  font-weight: 900;
+  line-height: 1.1;
+  text-align: left;
+  color: #f8f8f8;
+  font-size: 3em;
+  margin: 20px;
+}
+.titulo_home_h1{
+  margin: 0px 0px 40px;
+}
+.boton {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #502314;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+  }
+  .icono_bolsa_papel{
+    margin: 0px 20px 0px;
+   width: 50px; /* Tamaño ajustado */
+  }
+.video-bg {
+  margin-bottom: 100px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
+
+.container {
+display: flex;
+justify-content: space-between;
+align-items: center;
+}
+
+.columna1 {
+flex: 1;
+text-align: center;
+background-color: #502314;
+padding-bottom: 40px;
+padding-top: 40px;
+color: white;
+}
+.columna1 h2{
+  margin-bottom: 15px;
+}
+.columna1 p{
+  margin-bottom: 15px;
+}
+.columna2 {
+flex: 1;
+text-align: center;
+background-color: #d62300;
+padding-bottom: 40px;
+padding-top: 40px;
+color: white;
+}
+.columna2 h2{
+  margin-bottom: 15px;
+}
+.columna2 p{
+  margin-bottom: 15px;
+}
+.columna3 {
+flex: 1;
+text-align: center;
+background-color: #fa0;
+padding-bottom: 40px;
+padding-top: 40px;
+}
+.columna3 h2{
+  margin-bottom: 15px;
+}
+.columna3 p{
+  margin-bottom: 15px;
+}
+.columna1 img {
+max-width: 70%;
+height: 70%;
+margin-bottom: 2px;
+}
+.columna2 img {
+max-width: 70%;
+height: 70%;
+margin-bottom: 2px;
+}
+.columna3 img {
+max-width: 70%;
+height: 70%;
+margin-bottom: 2px;
+}
+
+.boton1 {
+display: inline-block;
+padding: 10px 20px;
+background-color: white;
+color: #502314;
+text-decoration: none;
+border-radius: 5px;
+}
+.boton2 {
+display: inline-block;
+padding: 10px 20px;
+background-color: white;
+color: #d62300;
+text-decoration: none;
+border-radius: 5px;
+}
+.boton3 {
+display: inline-block;
+padding: 10px 20px;
+background-color: #502314;
+color: #fa0;
+text-decoration: none;
+border-radius: 5px;
+}
+.imagen-texto {
+  background-color: #8B4513; /* Marrón */
+  color: white;
+  padding: 0px 0;
+}
+/* Contenido Imagen y texto*/
+.contenido {
+  text-align: center;
+  height: 100%;
+  width: 100%;
+  background-color: #502314;
+}
+
+.contenido img {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto 0px;
+}
+
+.contenido h2 {
+  font-size: 2em;
+  margin-bottom: 30px;
+  margin-top: 50px;
+}
+
+.contenido p {
+  font-size: 1.2em;
+  margin-top: 30px;
+  margin-left: 500px;
+  margin-right: 500px;
+  padding-bottom: 80px;
+}
+
