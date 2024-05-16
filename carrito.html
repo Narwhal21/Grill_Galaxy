@@ -8,35 +8,6 @@
 </head>
 
 <body>
-    <footer>
-        <div class="footer-columns">
-            <div class="column">
-                <h3>Columna 1</h3>
-                <p>Contenido de la columna 1.</p>
-            </div>
-            <div class="column">
-                <h3>Columna 2</h3>
-                <p>Contenido de la columna 2.</p>
-            </div>
-            <div class="column">
-                <h3>Columna 3</h3>
-                <p>Contenido de la columna 3.</p>
-            </div>
-        </div>
-        <button class="dropdown-button" onclick="toggleDropdown()">Más información</button>
-        <div class="dropdown-content" id="dropdown-content">
-            <p>Información adicional desplegable.</p>
-        </div>
-    </footer>
-
-    <script>
-        function toggleDropdown() {
-            const dropdownContent = document.getElementById('dropdown-content');
-            dropdownContent.classList.toggle('show');
-        }
-    </script>
-
-
     <div class="conte">
         <div class="colum-izq">
             <h1>Tienda Online</h1>
@@ -139,6 +110,32 @@
             <div id="cart">
             </div>
             <p>Total: €<span id="cart-total">0</span></p>
+        </div>
+        <div class="nav-container">
+            <header>
+                <div class="logo">
+                    <a href="my_grill_galaxy.html"><img src="img/Logo.png" alt="Logo"></a>
+                </div>
+                <nav>
+                    <ul>
+                        <li><a href="my_grill_galaxy.html">INICIO</a></li>
+                        <li><a href="#">CARTA</a></li>
+                        <li><a href="#">ORIGINALS</a></li>
+                        <li><a href="novedades.html">NOVEDADES</a></li>
+                        <li><a href="#">VEGETARIANO</a></li>
+                        <li class="desplegable">
+                            <a href="#">GRILL GALAXY</a>
+                            <ul>
+                                <li><a href="#">SOBRE NOSOTROS</a></li>
+                                <li><a href="#">RESTAURANTES</a></li>
+                                <li><a href="trabaja_con_nosotros.html">TRABAJA CON NOSOTROS</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">GRILL GALAXY</a></li>
+                        <li><a href="login.html"><button class="boton-inicio-sesion">Inicio de Sesión</button></a></li>
+                    </ul>
+                </nav>
+            </header>
         </div>
     </div>
     <script src="carritos.js"></script>
