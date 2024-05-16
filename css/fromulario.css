@@ -87,6 +87,10 @@ nav ul li a {
   border-radius: 5px;
   /* Bordes redondeados */
 }
+.icono-carrito {
+  width: 34px;
+  height: 34;
+}
 
 section {
   background-color: #f5ebdc;

@@ -81,6 +81,11 @@ nav ul li a {
   border-radius: 5px; /* Bordes redondeados */
   cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
 }
+
+.icono-carrito {
+  width: 34px;
+  height: 34;
+}
 /* Parte del video */
 .home{
   width: 100%;
