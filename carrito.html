@@ -8,6 +8,34 @@
 </head>
 
 <body>
+    <footer>
+        <div class="footer-columns">
+            <div class="column">
+                <h3>Columna 1</h3>
+                <p>Contenido de la columna 1.</p>
+            </div>
+            <div class="column">
+                <h3>Columna 2</h3>
+                <p>Contenido de la columna 2.</p>
+            </div>
+            <div class="column">
+                <h3>Columna 3</h3>
+                <p>Contenido de la columna 3.</p>
+            </div>
+        </div>
+        <button class="dropdown-button" onclick="toggleDropdown()">Más información</button>
+        <div class="dropdown-content" id="dropdown-content">
+            <p>Información adicional desplegable.</p>
+        </div>
+    </footer>
+
+    <script>
+        function toggleDropdown() {
+            const dropdownContent = document.getElementById('dropdown-content');
+            dropdownContent.classList.toggle('show');
+        }
+    </script>
+
 
     <div class="conte">
         <div class="colum-izq">
