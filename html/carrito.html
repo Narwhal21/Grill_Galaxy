@@ -2,117 +2,186 @@
 <html lang="es">
 
 <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Caprasimo&display=swap" rel="stylesheet">
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Carrito de Compras</title>
     <link rel="stylesheet" href="../css/carrito.css">
 </head>
 
 <body>
-
+    <div class="nav-container">
+        <header>
+            <div class="logo">
+                <a href="my_grill_galaxy.html"><img src="../iamgenes/Fotos-Home/Logo.png" alt="Logo"></a>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#">INICIO</a></li>
+                    <li><a href="#">CARTA</a></li>
+                    <li><a href="/html/originals.html">ORIGINALS</a></li>
+                    <li><a href="#">NOVEDADES</a></li>
+                    <li><a href="#">VEGETARIANO</a></li>
+                    <li class="desplegable">
+                        <a href="#">GRILL GALAXY</a>
+                        <ul>
+                            <li><a href="#">SOBRE NOSOTROS</a></li>
+                            <li><a href="#">RESTAURANTES</a></li>
+                            <li><a href="trabaja_con_nosotros.html">TRABAJA CON NOSOTROS</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="login.html"><button class="boton-inicio-sesion">Inicio de Sesión</button></a></li>
+                    <li><a href="/html/carrito.html"><img src="../iamgenes/Fotos-Home/3144456.png" alt="Carrito"
+                                class="icono-carrito"></a></li>
+                </ul>
+            </nav>
+        </header>
+    </div>
     <div class="conte">
         <div class="colum-izq">
-            <h1>Tienda Online</h1>
+            <h1>TIENDA ONLINE</h1>
 
             <div class="product-list">
                 <div class="product" data-id="1" data-name="Double-Bacon" data-price="9.99€">
-                    <img src="/img/GME_Doble_Bacon.png" alt="Double-Bacon" class="product-image">
-                    <h2>Double-Bacon</h2>
+                    <img src="/iamgenes/Hambuurguesas/GME_Doble_Bacon.png" alt="Double-Bacon" class="product-image">
+                    <h2>DOUBLE-BEACON</h2>
                     <p id="item.price">Precio: 9,99€</p>
-                    <button onclick="addToCart(this)">Agregar al Carrito</button>
+                    <button class="boton" onclick="addToCart(this)">AGREGAR AL CARRITO</button>
                 </div>
                 <div class="product" data-id="2" data-name="Crispy" data-price="12.99€">
-                    <img src="/img/Crispy_Original.png" alt="Crispy" class="product-image">
-                    <h2>Crispy</h2>
+                    <img src="/iamgenes/Hambuurguesas/Crispy_Original.png" alt="Crispy" class="product-image">
+                    <h2>CRISPY</h2>
                     <p>Precio: 12.99$</p>
-                    <button onclick="addToCart(this)">Agregar al Carrito</button>
+                    <button class="boton" onclick="addToCart(this)">AGREGAR AL CARRITO</button>
                 </div>
                 <div class="product" data-id="3" data-name="BigGalaxy" data-price="9.99€">
-                    <img src="/img/BigMac.png" alt="BigGalaxy" class="product-image">
-                    <h2>BigGalaxy</h2>
+                    <img src="/iamgenes/Hambuurguesas/BigMac.png" alt="BigGalaxy" class="product-image">
+                    <h2>BIG-GALAXY</h2>
                     <p>Precio: 9,99€</p>
-                    <button onclick="addToCart(this)">Agregar al Carrito</button>
+                    <button class="boton" onclick="addToCart(this)">AGREGAR AL CARRITO</button>
                 </div>
                 <div class="product" data-id="4" data-name="Bacon&Chicken" data-price="9.99€">
                     <img src="/iamgenes/Hambuurguesas/Bacon&Chicken.png" alt="Bacon&Chicken" class="product-image">
-                    <h2>Bacon&Chicken</h2>
+                    <h2>BACON&CHICHEN</h2>
                     <p>Precio: 9.99€</p>
-                    <button onclick="addToCart(this)">Agregar al Carrito</button>
+                    <button class="boton" onclick="addToCart(this)">AGREGAR AL CARRITO</button>
                 </div>
                 <div class="product" data-id="5" data-name="Memphis&BBQ" data-price="9.99€">
-                    <img src="/iamgenes/Hambuurguesas/Hamburguesa Memphis BBQ.png" alt="Memphis&BBQ" class="product-image">
-                    <h2>Memphis&BBQ</h2>
+                    <img src="/iamgenes/Hambuurguesas/Hamburguesa Memphis BBQ.png" alt="Memphis&BBQ"
+                        class="product-image">
+                    <h2>MEMPHIS&BBQ</h2>
                     <p>Precio: 9.99€</p>
-                    <button onclick="addToCart(this)">Agregar al Carrito</button>
+                    <button class="boton" onclick="addToCart(this)">AGREGAR AL CARRITO</button>
                 </div>
                 <div class="product" data-id="6" data-name="Super Star" data-price="11.99€">
                     <img src="/iamgenes/Hambuurguesas/Super Star.png" alt="Super Star" class="product-image">
-                    <h2>Super Star</h2>
+                    <h2>SUPER STAR</h2>
                     <p>Precio: 11.99€</p>
-                    <button onclick="addToCart(this)">Agregar al Carrito</button>
+                    <button class="boton" onclick="addToCart(this)">AGREGAR AL CARRITO</button>
                 </div>
                 <div class="product" data-id="7" data-name="Acuarius" data-price="1.99€">
                     <img src="/iamgenes/Bebidas/Aquarius_Zero.png" alt="Acuarius" class="product-image">
-                    <h2>Acuarius</h2>
+                    <h2>ACUARIUS</h2>
                     <p>Precio: 1.99€</p>
-                    <button onclick="addToCart(this)">Agregar al Carrito</button>
+                    <button class="boton" onclick="addToCart(this)">AGREGAR AL CARRITO</button>
                 </div>
                 <div class="product" data-id="8" data-name="CocaCola" data-price="1.99€">
                     <img src="/iamgenes/Bebidas/CocaCola.png" alt="CocaCola" class="product-image">
-                    <h2>CocaCola</h2>
+                    <h2>COCACOLA</h2>
                     <p>Precio: 1.99€</p>
-                    <button onclick="addToCart(this)">Agregar al Carrito</button>
+                    <button class="boton" onclick="addToCart(this)">AGREGAR AL CARRITO</button>
                 </div>
                 <div class="product" data-id="9" data-name="CocaCola_Zero" data-price="1.99€">
                     <img src="/iamgenes/Bebidas/CocaCola_Zero_Zero.png" alt="CocaCola_Zero" class="product-image">
-                    <h2>Coca Cola Zero</h2>
+                    <h2>COCACOLA ZERO</h2>
                     <p>Precio: 1.99€</p>
-                    <button onclick="addToCart(this)">Agregar al Carrito</button>
+                    <button class="boton" onclick="addToCart(this)">AGREGAR AL CARRITO</button>
                 </div>
                 <div class="product" data-id="10" data-name="Fanta_Naranja" data-price="1.99€">
                     <img src="/iamgenes/Bebidas/Fanta_Naranja_Zero.png" alt="Fanta_Naranja" class="product-image">
-                    <h2>Fanta Naranja</h2>
+                    <h2>FANTA NARANJA</h2>
                     <p>Precio: 1.99€</p>
-                    <button onclick="addToCart(this)">Agregar al Carrito</button>
+                    <button class="boton" onclick="addToCart(this)">AGREGAR AL CARRITO</button>
                 </div>
                 <div class="product" data-id="11" data-name="Lipton" data-price="1.99€">
                     <img src="/iamgenes/Bebidas/Lipton.png" alt="Lipton" class="product-image">
-                    <h2>Lipton</h2>
+                    <h2>LIPTON</h2>
                     <p>Precio: 1.99€</p>
-                    <button onclick="addToCart(this)">Agregar al Carrito</button>
+                    <button class="boton" onclick="addToCart(this)">AGREGAR AL CARRITO</button>
                 </div>
                 <div class="product" data-id="12" data-name="Sprite" data-price="1.99€">
                     <img src="/iamgenes/Bebidas/Sprite_Zero.png" alt="Sprite" class="product-image">
-                    <h2>Sprite</h2>
+                    <h2>SPRITE</h2>
                     <p>Precio: 1.99€</p>
-                    <button onclick="addToCart(this)">Agregar al Carrito</button>
+                    <button class="boton" onclick="addToCart(this)">AGREGAR AL CARRITO</button>
                 </div>
                 <div class="product" data-id="13" data-name="Cheesecake" data-price="8.99€">
                     <img src="/iamgenes/Postre/Cheesecake.png" alt="Cheesecake" class="product-image">
-                    <h2>Cheesecake</h2>
+                    <h2>CHEESCAKE</h2>
                     <p>Precio: 2.99€</p>
-                    <button onclick="addToCart(this)">Agregar al Carrito</button>
+                    <button class="boton" onclick="addToCart(this)">AGREGAR AL CARRITO</button>
                 </div>
                 <div class="product" data-id="14" data-name="KitKat" data-price="3.49€">
                     <img src="/iamgenes/Postre/KitKat_Chocolate.png" alt="KitKat" class="product-image">
-                    <h2>KitKat</h2>
+                    <h2>KITKAT</h2>
                     <p>Precio: 3.49€</p>
-                    <button onclick="addToCart(this)">Agregar al Carrito</button>
+                    <button class="boton" onclick="addToCart(this)">AGREGAR AL CARRITO</button>
                 </div>
                 <div class="product" data-id="15" data-name="Sundae_Choco" data-price="3.49€">
                     <img src="/iamgenes/Postre/Sundae_Choco.png" alt="Sundae_Choco" class="product-image">
-                    <h2>Sundae Choco</h2>
+                    <h2>SUNDAE CHOCO</h2>
                     <p>Precio: 3.49€</p>
-                    <button onclick="addToCart(this)">Agregar al Carrito</button>
+                    <button class="boton" onclick="addToCart(this)">AGREGAR AL CARRITO</button>
                 </div>
             </div>
         </div>
         <div class="colum-der">
-            <h1>Carrito de Compras</h1>
+            <h1>CARRITO COMPRAS</h1>
             <div id="cart">
             </div>
-            <p>Total: €<span id="cart-total">0</span></p>
+            <p>TOTAL: €<span id="cart-total">0</span></p>
+            <a href="formulario_pago.html"><button class="boton">COMPRAR</button></a>
         </div>
     </div>
-    <script src="carritos.js"></script>
+    <footer>
+        <div class="contenedor-footer">
+            <div class="columna-footer">
+                <h3>SOBRE NOSOTROS</h3>
+                <ul>
+                    <li><a href="#">QUIENES SOMOS</a></li>
+                    <li><a href="#">NUESTRO EQUIPO</a></li>
+                    <li><a href="#">CARRERAS</a></li>
+                </ul>
+            </div>
+            <div class="columna-footer">
+                <h3>SERVICIOS</h3>
+                <ul>
+                    <li><a href="#">CONSULTORIAS</a></li>
+                    <li><a href="#">DESARROLO WEB</a></li>
+                    <li><a href="#">MARKETIN DIGITAL</a></li>
+                </ul>
+            </div>
+            <div class="columna-footer">
+                <h3>CONTACTO</h3>
+                <ul>
+                    <li><a href="#">EMAIL</a></li>
+                    <li><a href="#">TELEFONO</a></li>
+                    <li><a href="#">UBICACION</a></li>
+                </ul>
+            </div>
+            <div class="columna-footer redes-sociales">
+                <h3>SIGUENOS</h3>
+                <ul>
+                    <li><a href="#" target="_blank"><img src="/iamgenes/Fotos-Home/Facebook_Logo_(2019).png.webp" alt="Facebook"></a></li>
+                    <li><a href="#" target="_blank"><img src="/iamgenes/Fotos-Home/twitter-brand-new-logo-3-d-with-new-x-shaped-graphic-of-the-world-s-most-popular-social-media-free-png.webp" alt="Twitter"></a></li>
+                    <li><a href="#" target="_blank"><img src="/iamgenes/Fotos-Home/Instagram_icon.png.webp" alt="Instagram"></a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+    <script src="/js/carritos.js"></script>
 </body>
+
 </html>
