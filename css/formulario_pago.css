@@ -233,3 +233,91 @@ footer {
     width: 54px;
     height: 54px;
 }
+
+@media (max-width: 425px) {
+    /* Estilos para el header */
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 10px;
+    }
+
+    .logo img {
+        width: 80px;
+    }
+
+    nav ul {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    nav ul li {
+        margin-left: 0;
+        margin-bottom: 10px;
+        text-align: left;
+    }
+
+    nav ul li a {
+        display: block;
+        width: 100%;
+        padding: 10px 0;
+    }
+
+    .boton-inicio-sesion {
+        margin: 10px 0;
+        width: 100%;
+        text-align: center;
+    }
+
+    .icono-carrito {
+        width: 24px;
+        height: 24px;
+    }
+
+    /* Contenedor de formularios */
+    .form-containers {
+        flex-direction: column;
+        align-items: center;
+        margin-top: 500px;
+    }
+
+    .form-container {
+        width: 90%;
+        margin: 10px 0;
+    }
+
+    .image-links {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .image-item {
+        margin: 10px;
+    }
+
+    .image-item img {
+        width: 40px;
+        height: 40px;
+    }
+
+    /* footer */
+    .contenedor-footer {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .columna-footer {
+        width: 90%;
+        margin-bottom: 20px;
+    }
+
+    .redes-sociales ul {
+        justify-content: center;
+    }
+
+    .redes-sociales li a img {
+        width: 44px;
+        height: 44px;
+    }
+}

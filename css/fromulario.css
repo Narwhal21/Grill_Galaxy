@@ -232,3 +232,112 @@ footer {
   width: 54px;
   height: 54px;
 }
+
+@media screen and (max-width: 425px) {
+  /* Estilos para el header */
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 10px;
+  }
+
+  nav ul {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  nav ul li {
+    margin-left: 0;
+    margin-bottom: 10px;
+  }
+
+  nav ul li a {
+    display: block;
+    padding: 10px;
+    width: 100%;
+  }
+
+  .boton-inicio-sesion {
+    margin: 10px 0;
+    width: calc(100% - 20px);
+    padding: 10px;
+    font-size: 14px;
+  }
+
+  .icono-carrito {
+    margin-top: 10px;
+    width: 30px;
+    height: 30px;
+  }
+
+  .nav-container {
+    padding: 10px;
+  }
+
+  .logo img {
+    width: 80px;
+  }
+
+  section {
+    margin-top: 120px;
+    padding: 20px 0;
+  }
+
+  .container {
+    width: calc(100% - 20px);
+    margin: 400px auto;
+    padding: 20px;
+    box-shadow: none;
+  }
+
+  .form-group {
+    margin-bottom: 15px;
+  }
+
+  .form-group label {
+    font-size: 14px;
+  }
+
+  .form-group input,
+  .form-group select,
+  .form-group textarea {
+    width: calc(100% - 20px);
+    padding: 8px;
+    font-size: 14px;
+  }
+
+  .form-group input[type="file"] {
+    width: calc(100% - 20px);
+  }
+
+  .submit-btn,
+  .reset-btn {
+    width: calc(100% - 20px);
+    padding: 10px;
+    font-size: 14px;
+  }
+
+  footer {
+    padding: 10px 0;
+  }
+
+  .contenedor-footer {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .columna-footer {
+    width: 90%;
+    text-align: center;
+    margin-bottom: 10px;
+  }
+
+  .redes-sociales ul {
+    justify-content: center;
+  }
+
+  .redes-sociales li a img {
+    width: 40px;
+    height: 40px;
+  }
+}

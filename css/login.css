@@ -179,3 +179,109 @@ footer {
   width: 54px;
   height: 54px;
 }
+
+@media (max-width: 425px) {
+  .nav-container {
+    position: relative;
+  }
+
+  nav ul {
+    display: block;
+    text-align: center;
+  }
+
+  nav ul li {
+    display: block;
+    margin: 10px 0;
+  }
+
+  .boton-inicio-sesion {
+    margin: 10px 0;
+    padding: 5px 10px;
+    font-size: 14px;
+  }
+
+  .icono-carrito {
+    width: 30px;
+    height: 30px;
+  }
+
+  .home {
+    margin: 120px 0 0;
+  }
+
+  .titulo_home {
+    width: 100%;
+    padding: 100px 20px;
+    font-size: 2em;
+    text-align: center;
+  }
+
+  .titulo_home_h1 {
+    margin-bottom: 20px;
+  }
+
+  .boton {
+    padding: 10px 15px;
+    font-size: 14px;
+  }
+
+  .container {
+    max-width: 100%;
+    margin: 20px auto;
+    padding: 10px;
+  }
+
+  .columna1, .columna2, .columna3 {
+    width: 100%;
+    margin: 10px 0;
+  }
+
+  .columna1 img, .columna2 img, .columna3 img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  .boton1, .boton2, .boton3 {
+    padding: 5px 10px;
+    font-size: 14px;
+  }
+
+  .imagen-texto {
+    padding: 20px 0;
+  }
+
+  .contenido h2 {
+    font-size: 1.5em;
+    margin: 20px 0;
+  }
+
+  .contenido p {
+    font-size: 1em;
+    margin: 0 20px;
+    padding-bottom: 20px;
+  }
+
+  .contenedor-footer {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .columna-footer {
+    width: 90%;
+    text-align: center;
+  }
+
+  .columna-footer ul {
+    padding-left: 0;
+  }
+
+  .redes-sociales ul {
+    justify-content: center;
+  }
+
+  .redes-sociales li a img {
+    width: 40px;
+    height: 40px;
+  }
+}

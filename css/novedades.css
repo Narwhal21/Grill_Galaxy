@@ -220,3 +220,65 @@ footer {
     width: 54px;
     height: 54px;
 }
+
+@media (max-width: 425px) and (max-height: 906px) {
+    .nav-container {
+        position: static;
+    }
+
+    header {
+        flex-direction: column;
+    }
+
+    nav ul {
+        flex-direction: column;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+
+    .titulo-container {
+        padding-top: 100px;
+    }
+
+    .seccion-novedades {
+        padding: 20px;
+    }
+
+    .fila {
+        flex-direction: column;
+    }
+
+    .cajetilla {
+        width: 90%;
+    }
+
+    .cajetilla img {
+        width: 100%;
+    }
+
+    /* Ajustes para el footer */
+    .contenedor-footer {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .columna-footer {
+        width: 90%;
+        margin: 10px 0;
+    }
+
+    .redes-sociales ul {
+        justify-content: center;
+    }
+
+    .redes-sociales li {
+        margin: 0 10px;
+    }
+
+    .redes-sociales li a img {
+        width: 40px;
+        height: 40px;
+    }
+}
