@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Productos</title>
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        th, td {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+        img {
+            max-width: 100px;
+        }
+        #add-product-form {
+            display: none;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Lista de Productos</h1>
+    <button id="show-add-productos-form">Añadir Productos</button>
+    <form id="add-productos-form">
+        <input type="text" name="ID_PRODUCTOS" placeholder="ID_PRODUCTOS" required>
+        <input type="text" name="ID_CATEGORIA" placeholder="ID_CATEGORIA" required>
+        <input type="text" name="NOMBRE" placeholder="NOMBRE" required>
+        <input type="text" name="PRECIO" placeholder="PRECIO" required>
+        <button type="submit">Add Productos</button>
+    </form>
+    <table>
+        <thead>
+            <tr>
+                <th>ID_PRODUCTOS</th>
+                <th>ID_CATEGORIA</th>
+                <th>NOMBRE</th>
+                <th>PRECIO</th>
+                <th>Acciones</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Aquí se insertarán los productos mediante JavaScript -->
+        </tbody>
+    </table>
+    <script src="/js/Productos.js"></script>
+</body>
+</html>
