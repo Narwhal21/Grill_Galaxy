@@ -110,14 +110,14 @@ nav ul li a {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     padding: 20px;
     max-width: 50%;
-    margin-left: 350px;
+    margin-left: 450px;
 }
 
 h1 {
     text-align: center;
     color: #333;
     margin-bottom: 30px;
-    margin-top: 20px;
+    margin-top: 40px;
 }
 
 h2 {
@@ -157,7 +157,39 @@ p {
 .values {
     padding: 20px;
 }
+/* PARTE DE LAS CAJETILLAS */
+.wrapper {
+    display: flex;
+    margin-top: 130px;
+    margin-left: 350px;
+    gap: 20px;
+}
 
+.container {
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    max-width: 600px;
+    width: 1000px;
+    text-align: center;
+}
+
+h1 {
+    margin-top: 40px;
+    margin-bottom: 20px;
+}
+
+p {
+    margin: 20px 0;
+}
+
+iframe {
+    margin-top: 20px;
+    width: 100%;
+    border: 0;
+    height: 450px;
+}
 /* footer*/
 footer {
     background-color: #f5ebdc;
