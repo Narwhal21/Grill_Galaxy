@@ -1,14 +1,16 @@
 <!DOCTYPE html>
 <html lang="es">
-    <head>
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Caprasimo&display=swap" rel="stylesheet">
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Formulario Tarjeta</title>
-        <link rel="stylesheet" href="../css/formulario_pago.css">
-    </head>
+
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Caprasimo&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrito de Compras</title>
+    <link rel="stylesheet" href="/css/cart.css">
+</head>
+
 <body>
     <div class="nav-container">
         <header>
@@ -35,32 +37,21 @@
             </nav>
         </header>
     </div>
-    <div class="form-containers">
-        <div class="form-container">
-            <form action="factura.html">
-                <h2>CARD DATA</h2>
-                <label for="card-name">NAME:</label>
-                <input type="text" id="card-name" name="card-name" required>
-                <label for="card-number">CARD NUMBER</label>
-                <input type="text" id="card-number" name="card-number" required>
-                <label for="expiry-date">EXPIRATION DATE</label>
-                <input type="text" id="card-number" name="card-number" required>
-                <label for="cvv">CVC:</label>
-                <input type="text" id="cvv" name="cvv" required>
-                <a href="factura.html"><button class="boton" type="submit">MAKE PAYMENT</button></a>
-            </form>
+    <div class="conte">
+        <div class="colum-izq">
+            <h1>ONLINE STORE</h1>
+            <div class="product-list" id="product-menu">
+                <!-- Aquí se insertarán los productos mediante JavaScript -->
+            </div>
         </div>
-        <div class="form-container">
-            <div class="image-links">
-                <h2>PAYMENT METHODS</h2>
-                <div class="image-item">
-                    <a href="https://www.paypal.com/signin"><img src="https://cdn-icons-png.flaticon.com/512/888/888871.png" alt="Imagen 1"></a>
-                    <span>PAYPAL</span>
-                </div>
-                <div class="image-item">
-                    <a href="link2.html"><img src="https://cdn-icons-png.flaticon.com/512/1609/1609929.png" alt="Imagen 2"></a>
-                    <span>CASH ON DELIVERY</span>
-                </div>
+        <div class="colum-der">
+            <h1>SHOPPING CART</h1>
+            <div id="cart">
+                <ul class="cart-items" id="cart-items">
+                    <!-- Aquí se insertarán los ítems del carrito mediante JavaScript -->
+                </ul>
+                <p>TOTAL: €<span id="cart-total">0</span></p>
+                <a href="formulario_pago.html"><button class="boton">BUY</button></a>
             </div>
         </div>
     </div>
@@ -104,5 +95,7 @@
             </div>
         </div>
     </footer>
+    <script src="/js/Cart.js"></script>
 </body>
+
 </html>
