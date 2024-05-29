@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Admins</title>
+    <title>Lista de Admins</title>
     <style>
         table {
             width: 100%;
@@ -17,10 +17,7 @@
         th {
             background-color: #f2f2f2;
         }
-        img {
-            max-width: 100px;
-        }
-        #add-admins-form, #edit-admins-modal, #findall-admin-modal {
+        #add-admin-form, #edit-admin-modal {
             display: none;
             position: fixed;
             left: 50%;
@@ -45,27 +42,41 @@
 </head>
 <body>
     <h1>Lista de Admins</h1>
-
-    <!-- Modal para mostrar todos los admins -->
-    <div id="overlay" onclick="closeFindAllModal()"></div>
-    <div id="findall-admin-modal">
-        <h2>All Admins</h2>
-        <table>
-            <thead>
-                <tr>
-                    <th>ID_ADMIN</th>
-                    <th>ID_PRIVATEZONE</th>
-                    <th>NOMBRE</th>
-                    <th>APELLIDO</th>
-                </tr>
-            </thead>
-            <tbody>
-                <!-- Aquí se insertarán los admins mediante JavaScript -->
-            </tbody>
-        </table>
-        <button type="button" onclick="closeFindAllModal()">Close</button>
-    </div>
-
+    <form id="add-admin-form">
+        <input type="hidden" name="isUpdate" id="isUpdate" value="false">
+        <input type="text" name="ID_ADMIN" placeholder="ID_ADMIN" required>
+        <input type="text" name="ID_PRIVATEZONE" placeholder="ID_PRIVATEZONE" required>
+        <input type="text" name="NOMBRE" placeholder="NOMBRE" required>
+        <input type="text" name="APELLIDO" placeholder="APELLIDO" required>
+        <button type="submit" id="submit-button">Add Admin</button>
+        <button type="button" onclick="closeAddModal()">Cancel</button>
+    </form>
+    <!-- Modal para editar admins -->
+    <div id="overlay"></div>
+    <div id="edit-admin-modal">
+        <form id="edit-admin-form">
+            <input type="text" name="ID_ADMIN" id="edit-ID_ADMIN" required>
+            <input type="text" name="ID_PRIVATEZONE" id="edit-ID_PRIVATEZONE" placeholder="ID_PRIVATEZONE" required>
+            <input type="text" name="NOMBRE" id="edit-NOMBRE" placeholder="NOMBRE" required>
+            <input type="text" name="APELLIDO" id="edit-APELLIDO" placeholder="APELLIDO" required>
+            <button type="submit" id="submit-update-button">Update Admin</button>
+            <button type="button" onclick="closeModal()">Cancel</button>
+        </form>
+    </div>    
+    <table>
+        <thead>
+            <tr>
+                <th>ID_ADMIN</th>
+                <th>ID_PRIVATEZONE</th>
+                <th>NOMBRE</th>
+                <th>APELLIDO</th>
+                <th>Acciones</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Aquí se insertarán los admins mediante JavaScript -->
+        </tbody>
+    </table>
     <script src="/js/Admins.js"></script>
 </body>
 </html>
