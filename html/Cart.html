@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -9,8 +8,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Carrito de Compras</title>
     <link rel="stylesheet" href="/css/cart.css">
+    <style>
+        .cart-image {
+            width: 50px;  /* Ajusta el tamaño según tus necesidades */
+            height: auto;  /* Mantiene la proporción de la imagen */
+        }
+        .remove-button {
+            background-color: red;
+            color: white;
+            border: none;
+            padding: 5px 10px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+    </style>
 </head>
-
 <body>
     <div class="nav-container">
         <header>
@@ -31,8 +43,7 @@
                         </ul>
                     </li>
                     <li><a href="login.html"><button class="boton-inicio-sesion">Login</button></a></li>
-                    <li><a href="Cart.html"><img src="../iamgenes/Fotos-Home/3144456.png" alt="Carrito"
-                                class="icono-carrito"></a></li>
+                    <li><a href="Cart.html"><img src="../iamgenes/Fotos-Home/3144456.png" alt="Carrito" class="icono-carrito"></a></li>
                 </ul>
             </nav>
         </header>
@@ -70,7 +81,7 @@
                 <ul>
                     <li><a href="#">CONSULTING</a></li>
                     <li><a href="#">WEB DEVELOPMENT</a></li>
-                    <li><a href="#">DIGITAL MARKETIN</a></li>
+                    <li><a href="#">DIGITAL MARKETING</a></li>
                 </ul>
             </div>
             <div class="columna-footer">
@@ -84,18 +95,13 @@
             <div class="columna-footer redes-sociales">
                 <h3>FOLLOW US</h3>
                 <ul>
-                    <li><a href="#" target="_blank"><img src="../iamgenes/Fotos-Home/Facebook_Logo_(2019).png.webp"
-                                alt="Facebook"></a></li>
-                    <li><a href="#" target="_blank"><img
-                                src="../iamgenes/Fotos-Home/twitter-brand-new-logo-3-d-with-new-x-shaped-graphic-of-the-world-s-most-popular-social-media-free-png.webp"
-                                alt="Twitter"></a></li>
-                    <li><a href="#" target="_blank"><img src="../iamgenes/Fotos-Home/Instagram_icon.png.webp"
-                                alt="Instagram"></a></li>
+                    <li><a href="#" target="_blank"><img src="../iamgenes/Fotos-Home/Facebook_Logo_(2019).png.webp" alt="Facebook"></a></li>
+                    <li><a href="#" target="_blank"><img src="../iamgenes/Fotos-Home/twitter-brand-new-logo-3-d-with-new-x-shaped-graphic-of-the-world-s-most-popular-social-media-free-png.webp" alt="Twitter"></a></li>
+                    <li><a href="#" target="_blank"><img src="../iamgenes/Fotos-Home/Instagram_icon.png.webp" alt="Instagram"></a></li>
                 </ul>
             </div>
         </div>
     </footer>
     <script src="/js/Cart.js"></script>
 </body>
-
 </html>

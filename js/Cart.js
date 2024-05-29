@@ -51,11 +51,11 @@ document.addEventListener('DOMContentLoaded', () => {
             cartItem.className = 'cart-item';
             cartItem.id = `cart-item-${id}`;
             cartItem.innerHTML = `
-                <img src="${imgSrc}" alt="${name}">
+                <img src="${imgSrc}" alt="${name}" class="cart-image">
                 <p>${name}</p>
                 <p class="total-price">€${price.toFixed(2)}</p>
-                <input type="number" class="quantity" value="1" min="1">
-                <button onclick="removeFromCart(${id}, ${price})">X</button>
+                <input type="number" class="quantity" value="1" min="1" onchange="updateCartTotal()">
+                <button class="remove-button" onclick="removeFromCart('${id}')">X</button>
             `;
             cartItems.appendChild(cartItem);
         }
@@ -63,10 +63,12 @@ document.addEventListener('DOMContentLoaded', () => {
         updateCartTotal();
     };
 
-    window.removeFromCart = (id, price) => {
+    window.removeFromCart = (id) => {
         const cartItem = document.getElementById(`cart-item-${id}`);
-        cartItem.remove();
-        updateCartTotal();
+        if (cartItem) {
+            cartItem.remove();
+            updateCartTotal();
+        }
     };
 
     const updateCartTotal = () => {

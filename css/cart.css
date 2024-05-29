@@ -140,6 +140,11 @@ h1 {
     padding: 5px;
     border-bottom: 1px solid #ccc;
 }
+.cart-image {
+    width: 50px;  /* Ajusta el tamaño según tus necesidades */
+    height: auto;  /* Mantiene la proporción de la imagen */
+}
+
 
 .cart-item p {
     margin: 0;
