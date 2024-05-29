@@ -20,22 +20,54 @@
         img {
             max-width: 100px;
         }
-        #add-product-form {
+        #add-productos-form, #edit-productos-modal {
             display: none;
-            margin-top: 20px;
+            position: fixed;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            background-color: white;
+            padding: 20px;
+            border: 2px solid #ccc;
+            z-index: 2;
+        }
+        #overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: rgba(0,0,0,0.5);
+            z-index: 1;
         }
     </style>
 </head>
 <body>
     <h1>Lista de Productos</h1>
-    <button id="show-add-productos-form">Añadir Productos</button>
     <form id="add-productos-form">
+        <input type="hidden" name="isUpdate" id="isUpdate" value="false">
         <input type="text" name="ID_PRODUCTOS" placeholder="ID_PRODUCTOS" required>
         <input type="text" name="ID_CATEGORIA" placeholder="ID_CATEGORIA" required>
         <input type="text" name="NOMBRE" placeholder="NOMBRE" required>
         <input type="text" name="PRECIO" placeholder="PRECIO" required>
-        <button type="submit">Add Productos</button>
+        <input type="text" name="PRODUCTOSIMG" placeholder="PRODUCTOSIMG" required>
+        <button type="submit" id="submit-button">Add Productos</button>
+        <button type="button" onclick="closeAddModal()">Cancel</button>
     </form>
+    <!-- Modal para editar productos -->
+    <div id="overlay"></div>
+    <div id="edit-productos-modal">
+        <form id="edit-productos-form">
+            <input type="hidden" name="ID_PRODUCTOS" required>
+            <input type="text" name="ID_CATEGORIA" placeholder="ID_CATEGORIA" required>
+            <input type="text" name="NOMBRE" placeholder="NOMBRE" required>
+            <input type="text" name="PRECIO" placeholder="PRECIO" required>
+            <input type="text" name="PRODUCTOSIMG" placeholder="PRODUCTOSIMG" required>
+            <button type="submit" id="submit-update-button">Update Productos</button>
+            <button type="button" onclick="closeModal()">Cancel</button>
+        </form>
+    </div>
     <table>
         <thead>
             <tr>
@@ -43,6 +75,7 @@
                 <th>ID_CATEGORIA</th>
                 <th>NOMBRE</th>
                 <th>PRECIO</th>
+                <th>PRODUCTOSIMG</th>
                 <th>Acciones</th>
             </tr>
         </thead>
@@ -51,5 +84,16 @@
         </tbody>
     </table>
     <script src="/js/Productos.js"></script>
+    <script>
+        // Agrega estas funciones para cerrar los modales
+        function closeModal() {
+            document.getElementById('edit-productos-modal').style.display = 'none';
+            document.getElementById('overlay').style.display = 'none';
+        }
+        function closeAddModal() {
+            document.getElementById('add-productos-form').style.display = 'none';
+            document.getElementById('overlay').style.display = 'none';
+        }
+    </script>
 </body>
 </html>
