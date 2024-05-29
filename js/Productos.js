@@ -143,27 +143,24 @@ const updateProductos = async (event) => {
     event.preventDefault();
 
     const formData = new FormData(event.target);
-    const productosData = {
-        ID_PRODUCTOS: formData.get('ID_PRODUCTOS'),
-        ID_CATEGORIA: formData.get('ID_CATEGORIA'),
-        NOMBRE: formData.get('NOMBRE'),
-        PRECIO: formData.get('PRECIO'),
-        PRODUCTOSIMG: formData.get('PRODUCTOSIMG')
-    };
+    const ID_PRODUCTOS = formData.get('ID_PRODUCTOS');
+    const ID_CATEGORIA = formData.get('ID_CATEGORIA');
+    const NOMBRE = formData.get('NOMBRE');
+    const PRECIO = formData.get('PRECIO');
+    const PRODUCTOSIMG = formData.get('PRODUCTOSIMG');
 
-    console.log('Datos capturados del formulario:', productosData);
+    console.log('Datos capturados del formulario:', { ID_PRODUCTOS, ID_CATEGORIA, NOMBRE, PRECIO, PRODUCTOSIMG });
 
-    const url = `http://localhost:8080/TFG/Controller?ACTION=PRODUCTOS.UPDATE`;
+    const url = `http://localhost:8080/TFG/Controller?ACTION=PRODUCTOS.UPDATE&ID_PRODUCTOS=${ID_PRODUCTOS}&ID_CATEGORIA=${ID_CATEGORIA}&NOMBRE=${encodeURIComponent(NOMBRE)}&PRECIO=${PRECIO}&PRODUCTOSIMG=${encodeURIComponent(PRODUCTOSIMG)}`;
 
     console.log('URL utilizada para la actualización:', url);
 
     try {
         const response = await fetch(url, {
-            method: 'POST',
+            method: 'POST',  // Verifica que el método sea el correcto según tu backend
             headers: {
-                'Content-Type': 'application/json'
-            },
-            body: JSON.stringify(productosData)
+                'Content-Type': 'application/x-www-form-urlencoded'
+            }
         });
 
         if (!response.ok) {
@@ -181,7 +178,7 @@ const updateProductos = async (event) => {
 
         console.log('Respuesta del servidor:', result);
 
-        getProductos();  // Asegúrate de que getProductos esté en el alcance
+        await getProductos();  // Asegúrate de que getProductos esté en el alcance
         document.getElementById('edit-productos-form').reset();
         document.getElementById('edit-productos-modal').style.display = 'none';
         document.getElementById('overlay').style.display = 'none';
@@ -189,6 +186,7 @@ const updateProductos = async (event) => {
         console.error('Error updating productos:', error.message);
     }
 };
+
 
 // Función para cerrar el modal de edición
 const closeModal = () => {
