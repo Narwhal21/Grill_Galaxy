@@ -139,16 +139,14 @@ const updateEmpleado = async (event) => {
     event.preventDefault();
 
     const formData = new FormData(event.target);
-    const empleadoData = {
-        ID_EMPLEADO: formData.get('ID_EMPLEADO'),
-        ID_PRIVATEZONE: formData.get('ID_PRIVATEZONE'),
-        NOMBRE: formData.get('NOMBRE'),
-        APELLIDO: formData.get('APELLIDO')
-    };
+    const ID_EMPLEADO = formData.get('ID_EMPLEADO');
+    const ID_PRIVATEZONE = formData.get('ID_PRIVATEZONE');
+    const NOMBRE = formData.get('NOMBRE');
+    const APELLIDO = formData.get('APELLIDO');
 
-    console.log('Datos capturados del formulario:', empleadoData);
+    console.log('Datos capturados del formulario:', { ID_EMPLEADO, ID_PRIVATEZONE, NOMBRE, APELLIDO });
 
-    const url = `http://localhost:8080/TFG/Controller?ACTION=EMPLEADO.UPDATE`;
+    const url = `http://localhost:8080/TFG/Controller?ACTION=EMPLEADO.UPDATE&ID_EMPLEADO=${ID_EMPLEADO}&ID_PRIVATEZONE=${ID_PRIVATEZONE}&NOMBRE=${encodeURIComponent(NOMBRE)}&APELLIDO=${encodeURIComponent(APELLIDO)}`;
 
     console.log('URL utilizada para la actualización:', url);
 
@@ -156,9 +154,8 @@ const updateEmpleado = async (event) => {
         const response = await fetch(url, {
             method: 'POST',
             headers: {
-                'Content-Type': 'application/json'
-            },
-            body: JSON.stringify(empleadoData)
+                'Content-Type': 'application/x-www-form-urlencoded'
+            }
         });
 
         if (!response.ok) {
@@ -176,7 +173,7 @@ const updateEmpleado = async (event) => {
 
         console.log('Respuesta del servidor:', result);
 
-        getEmpleados();  // Asegúrate de que getEmpleados esté en el alcance
+        await getEmpleados();  // Asegúrate de que getEmpleados esté en el alcance
         document.getElementById('edit-empleado-form').reset();
         document.getElementById('edit-empleado-modal').style.display = 'none';
         document.getElementById('overlay').style.display = 'none';
@@ -184,6 +181,7 @@ const updateEmpleado = async (event) => {
         console.error('Error updating empleado:', error.message);
     }
 };
+
 
 // Función para cerrar el modal de edición
 const closeModal = () => {

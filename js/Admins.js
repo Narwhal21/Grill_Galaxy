@@ -139,16 +139,14 @@ const updateAdmin = async (event) => {
     event.preventDefault();
 
     const formData = new FormData(event.target);
-    const adminData = {
-        ID_ADMIN: formData.get('ID_ADMIN'),
-        ID_PRIVATEZONE: formData.get('ID_PRIVATEZONE'),
-        NOMBRE: formData.get('NOMBRE'),
-        APELLIDO: formData.get('APELLIDO')
-    };
+    const ID_ADMIN = formData.get('ID_ADMIN');
+    const ID_PRIVATEZONE = formData.get('ID_PRIVATEZONE');
+    const NOMBRE = formData.get('NOMBRE');
+    const APELLIDO = formData.get('APELLIDO');
 
-    console.log('Datos capturados del formulario:', adminData);
+    console.log('Datos capturados del formulario:', { ID_ADMIN, ID_PRIVATEZONE, NOMBRE, APELLIDO });
 
-    const url = `http://localhost:8080/TFG/Controller?ACTION=ADMIN.UPDATE`;
+    const url = `http://localhost:8080/TFG/Controller?ACTION=ADMIN.UPDATE&ID_ADMIN=${ID_ADMIN}&ID_PRIVATEZONE=${ID_PRIVATEZONE}&NOMBRE=${encodeURIComponent(NOMBRE)}&APELLIDO=${encodeURIComponent(APELLIDO)}`;
 
     console.log('URL utilizada para la actualización:', url);
 
@@ -156,9 +154,8 @@ const updateAdmin = async (event) => {
         const response = await fetch(url, {
             method: 'POST',
             headers: {
-                'Content-Type': 'application/json'
-            },
-            body: JSON.stringify(adminData)
+                'Content-Type': 'application/x-www-form-urlencoded'
+            }
         });
 
         if (!response.ok) {
@@ -176,7 +173,7 @@ const updateAdmin = async (event) => {
 
         console.log('Respuesta del servidor:', result);
 
-        getAdmins();  // Asegúrate de que getAdmins esté en el alcance
+        await getAdmins();  // Asegúrate de que getAdmins esté en el alcance
         document.getElementById('edit-admin-form').reset();
         document.getElementById('edit-admin-modal').style.display = 'none';
         document.getElementById('overlay').style.display = 'none';
@@ -184,6 +181,7 @@ const updateAdmin = async (event) => {
         console.error('Error updating admin:', error.message);
     }
 };
+
 
 // Función para cerrar el modal de edición
 const closeModal = () => {
