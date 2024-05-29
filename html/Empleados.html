@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Empleados</title>
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        th, td {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+        #add-empleado-form, #edit-empleado-modal {
+            display: none;
+            position: fixed;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            background-color: white;
+            padding: 20px;
+            border: 2px solid #ccc;
+            z-index: 2;
+        }
+        #overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: rgba(0,0,0,0.5);
+            z-index: 1;
+        }
+    </style>
+</head>
+<body>
+    <h1>Lista de Empleados</h1>
+    <form id="add-empleado-form">
+        <input type="hidden" name="isUpdate" id="isUpdate" value="false">
+        <input type="text" name="ID_EMPLEADO" placeholder="ID_EMPLEADO" required>
+        <input type="text" name="ID_PRIVATEZONE" placeholder="ID_PRIVATEZONE" required>
+        <input type="text" name="NOMBRE" placeholder="NOMBRE" required>
+        <input type="text" name="APELLIDO" placeholder="APELLIDO" required>
+        <button type="submit" id="submit-button">Add Empleado</button>
+        <button type="button" onclick="closeAddModal()">Cancel</button>
+    </form>
+    <!-- Modal para editar empleados -->
+    <div id="overlay"></div>
+    <div id="edit-empleado-modal">
+        <form id="edit-empleado-form">
+            <input type="text" name="ID_EMPLEADO" id="edit-ID_EMPLEADO" required>
+            <input type="text" name="ID_PRIVATEZONE" id="edit-ID_PRIVATEZONE" placeholder="ID_PRIVATEZONE" required>
+            <input type="text" name="NOMBRE" id="edit-NOMBRE" placeholder="NOMBRE" required>
+            <input type="text" name="APELLIDO" id="edit-APELLIDO" placeholder="APELLIDO" required>
+            <button type="submit" id="submit-update-button">Update Empleado</button>
+            <button type="button" onclick="closeModal()">Cancel</button>
+        </form>
+    </div>    
+    <table>
+        <thead>
+            <tr>
+                <th>ID_EMPLEADO</th>
+                <th>ID_PRIVATEZONE</th>
+                <th>NOMBRE</th>
+                <th>APELLIDO</th>
+                <th>Acciones</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Aquí se insertarán los empleados mediante JavaScript -->
+        </tbody>
+    </table>
+    <script src="/js/Empleados.js"></script>
+</body>
+</html>
