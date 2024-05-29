@@ -59,15 +59,15 @@
     <div id="overlay"></div>
     <div id="edit-productos-modal">
         <form id="edit-productos-form">
-            <input type="hidden" name="ID_PRODUCTOS" required>
-            <input type="text" name="ID_CATEGORIA" placeholder="ID_CATEGORIA" required>
-            <input type="text" name="NOMBRE" placeholder="NOMBRE" required>
-            <input type="text" name="PRECIO" placeholder="PRECIO" required>
-            <input type="text" name="PRODUCTOSIMG" placeholder="PRODUCTOSIMG" required>
+            <input type="text" name="ID_PRODUCTOS" id="edit-ID_PRODUCTOS" required>
+            <input type="text" name="ID_CATEGORIA" id="edit-ID_CATEGORIA" placeholder="ID_CATEGORIA" required>
+            <input type="text" name="NOMBRE" id="edit-NOMBRE" placeholder="NOMBRE" required>
+            <input type="text" name="PRECIO" id="edit-PRECIO" placeholder="PRECIO" required>
+            <input type="text" name="PRODUCTOSIMG" id="edit-PRODUCTOSIMG" placeholder="PRODUCTOSIMG" required>
             <button type="submit" id="submit-update-button">Update Productos</button>
             <button type="button" onclick="closeModal()">Cancel</button>
         </form>
-    </div>
+    </div>    
     <table>
         <thead>
             <tr>
@@ -84,16 +84,5 @@
         </tbody>
     </table>
     <script src="/js/Productos.js"></script>
-    <script>
-        // Agrega estas funciones para cerrar los modales
-        function closeModal() {
-            document.getElementById('edit-productos-modal').style.display = 'none';
-            document.getElementById('overlay').style.display = 'none';
-        }
-        function closeAddModal() {
-            document.getElementById('add-productos-form').style.display = 'none';
-            document.getElementById('overlay').style.display = 'none';
-        }
-    </script>
 </body>
 </html>
