@@ -72,7 +72,7 @@ const createAdminDetail = (admins) => {
 
 // Función para eliminar admins
 const deleteAdmin = async (id) => {
-    const url = `http://localhost:8080/TFG/Controller?ACTION=ADMINS.DELETE&ID_ADMIN=${id}`;
+    const url = `http://localhost:8080/TFG/Controller?ACTION=ADMIN.DELETE&ID_ADMIN=${id}`;
 
     try {
         const response = await fetch(url, {
@@ -107,7 +107,7 @@ const addAdmin = async (event) => {
         APELLIDO: formData.get('APELLIDO')
     };
 
-    const url = `http://localhost:8080/TFG/Controller?ACTION=ADMINS.${isUpdate ? 'UPDATE' : 'ADD'}`;
+    const url = `http://localhost:8080/TFG/Controller?ACTION=ADMIN.${isUpdate ? 'UPDATE' : 'ADD'}`;
     const method = isUpdate ? 'PUT' : 'POST';
 
     try {
@@ -148,7 +148,7 @@ const updateAdmin = async (event) => {
 
     console.log('Datos capturados del formulario:', adminData);
 
-    const url = `http://localhost:8080/TFG/Controller?ACTION=ADMINS.UPDATE`;
+    const url = `http://localhost:8080/TFG/Controller?ACTION=ADMIN.UPDATE`;
 
     console.log('URL utilizada para la actualización:', url);
 

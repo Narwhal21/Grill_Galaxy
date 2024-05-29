@@ -72,7 +72,7 @@ const createEmpleadoDetail = (empleados) => {
 
 // Función para eliminar empleados
 const deleteEmpleado = async (id) => {
-    const url = `http://localhost:8080/TFG/Controller?ACTION=EMPLEADOS.DELETE&ID_EMPLEADO=${id}`;
+    const url = `http://localhost:8080/TFG/Controller?ACTION=EMPLEADO.DELETE&ID_EMPLEADO=${id}`;
 
     try {
         const response = await fetch(url, {
@@ -107,7 +107,7 @@ const addEmpleado = async (event) => {
         APELLIDO: formData.get('APELLIDO')
     };
 
-    const url = `http://localhost:8080/TFG/Controller?ACTION=EMPLEADOS.${isUpdate ? 'UPDATE' : 'ADD'}`;
+    const url = `http://localhost:8080/TFG/Controller?ACTION=EMPLEADO.${isUpdate ? 'UPDATE' : 'ADD'}`;
     const method = isUpdate ? 'PUT' : 'POST';
 
     try {
@@ -148,7 +148,7 @@ const updateEmpleado = async (event) => {
 
     console.log('Datos capturados del formulario:', empleadoData);
 
-    const url = `http://localhost:8080/TFG/Controller?ACTION=EMPLEADOS.UPDATE`;
+    const url = `http://localhost:8080/TFG/Controller?ACTION=EMPLEADO.UPDATE`;
 
     console.log('URL utilizada para la actualización:', url);
 
