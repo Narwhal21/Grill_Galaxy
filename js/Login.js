@@ -23,6 +23,14 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     // Manejar el formulario de inicio de sesión
+
+    const users = [
+        { email: 'admin@galxy.com', password: 'admin123', role: 'admin' },
+        { email: 'empleado@galaxy.com', password: 'empleado123', role: 'empleado' }
+    ];
+    localStorage.setItem('users', JSON.stringify(users));
+    
+    
     document.getElementById('loginForm').onsubmit = function (event) {
         event.preventDefault();
         const email = document.getElementById('userEmail').value;
