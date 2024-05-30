@@ -25,7 +25,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // Manejar el formulario de inicio de sesión
 
     const users = [
-        { email: 'admin@galxy.com', password: 'admin123', role: 'admin' },
+        { email: 'admin@galaxy.com', password: 'admin123', role: 'admin' },
         { email: 'empleado@galaxy.com', password: 'empleado123', role: 'empleado' }
     ];
     localStorage.setItem('users', JSON.stringify(users));
